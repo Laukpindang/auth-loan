@@ -1,0 +1,24 @@
+.dashboard{
+    height: 100vh;
+    background-image: linear-gradient(rgb(141, 163, 238), rgb(24, 24, 226));
+    padding-left: 15%;
+    text-align: left;
+}
+
+.dashboard h1{
+    padding-top: 10%;
+}
+
+.dashboard-content{
+    height: 20%;
+    border: 5px solid black;
+    border-radius: 10px;
+    border-color: black;
+    width: 40%;
+    background-color: white;
+}
+
+.dashboard button{
+    width: 90px;
+    margin-bottom: 15px;
+}
