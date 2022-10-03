@@ -3,7 +3,6 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import './style.scss';
 
 const ListLoan = () => {
     const navigate = useNavigate();
@@ -59,7 +58,7 @@ const ListLoan = () => {
                 </div>
             ) :
             (
-                <h3 style={{textAlign: 'center', color: 'red'}}>Terjadi Kesalahan!!! <br />silahkan coba lagi nanti</h3>
+                <h3 style={{textAlign: 'center', color: 'red'}}>Mohon Tunggu Sebentar</h3>
             )
         }
         </>        
