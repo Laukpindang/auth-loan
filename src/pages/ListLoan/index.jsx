@@ -27,41 +27,41 @@ const ListLoan = () => {
     },[])
 
     return (
-        <>
-        {
-            statusCode === 200 ?
-            (
-                <div className="list">
-                    <div className="judul"><h2>List Peminjaman</h2></div>
-                    <table border='1' cellPadding='5' cellSpacing='0'>
-                        <thead>
-                            <tr>
-                                <th>Nomor KTP</th>
-                                <th>Nama Peminjam</th>
-                                <th>Nominal Pinjaman</th>
-                            </tr>
-                        </thead>
+      <>
+      {
+        statusCode === 200 ?
+        (
+          <div className="list">
+            <div className="judul"><h2>List Peminjaman</h2></div>
+            <table border='1' cellPadding='5' cellSpacing='0'>
+              <thead>
+                <tr>
+                  <th>Nomor KTP</th>
+                  <th>Nama Peminjam</th>
+                  <th>Nominal Pinjaman</th>
+                </tr>
+              </thead>
 
-                        <tbody>
-                            {
-                                dataLoan.map((item, key) => (
-                                    <tr key={key}>
-                                        <td>{item?.main_borrower_id_card_num}</td>
-                                        <td>{item?.main_borrower_name}</td>
-                                        <td className="amount-loan"><span>Rp</span>{item?.amount?.toLocaleString()}</td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table><br />
-                    <button onClick={() => navigate('/dashboard') }>Kembali</button>
-                </div>
-            ) :
-            (
-                <h3 style={{textAlign: 'center', color: 'red'}}>Mohon Tunggu Sebentar</h3>
-            )
-        }
-        </>        
+              <tbody>
+                {
+                  dataLoan.map((item, key) => (
+                    <tr key={key}>
+                      <td>{item?.main_borrower_id_card_num}</td>
+                      <td>{item?.main_borrower_name}</td>
+                      <td className="amount-loan"><span>Rp</span>{item?.amount?.toLocaleString()}</td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table><br />
+            <button onClick={() => navigate('/dashboard') }>Kembali</button>
+          </div>
+        ) :
+        (
+            <h3 style={{textAlign: 'center', color: 'red'}}>Mohon Tunggu Sebentar</h3>
+        )
+      }
+      </>        
     );
 };
 export default ListLoan;
